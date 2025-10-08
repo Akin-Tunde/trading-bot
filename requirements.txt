@@ -1,0 +1,7 @@
+pdfplumber
+transformers
+openai
+pandas
+requests
+matplotlib
+
