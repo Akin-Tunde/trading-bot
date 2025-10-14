@@ -1,0 +1,47 @@
+2025-10-13 08:04:45,395 - INFO - Trading Bot Orchestrator initialized
+2025-10-13 08:04:45,395 - INFO - ==================================================
+2025-10-13 08:04:45,396 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-13 08:04:45,396 - INFO - ==================================================
+2025-10-13 08:04:45,396 - INFO - STEP 1: Document Extraction
+2025-10-13 08:04:45,396 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-13 08:04:45,718 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-13 08:04:47,877 - INFO - Successfully extracted text from 1 documents
+2025-10-13 08:04:47,882 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-13 08:04:47,883 - INFO - STEP 2: NLP Analysis
+2025-10-13 08:04:47,883 - INFO - Starting NLP analysis of documents
+2025-10-13 08:04:47,883 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-13 08:04:51,090 - ERROR - Error in text summarization: name 'torch' is not defined
+2025-10-13 08:04:51,462 - ERROR - Error in sentiment analysis: name 'torch' is not defined
+2025-10-13 08:04:51,471 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-10-13 08:04:51,471 - INFO - NLP analysis completed for 1 documents
+2025-10-13 08:04:51,471 - INFO - STEP 3: Signal Generation
+2025-10-13 08:04:51,471 - INFO - Generating trading signals
+2025-10-13 08:04:51,472 - INFO - Generated 5 trading signals from analysis
+2025-10-13 08:04:51,472 - ERROR - Error generating signals: 'TradingSignal' object does not support item assignment
+2025-10-13 08:04:51,472 - ERROR - Workflow failed: 'TradingSignal' object does not support item assignment
+2025-10-13 08:04:51,473 - ERROR - Trading bot execution failed: 'TradingSignal' object does not support item assignment
+2025-10-13 08:11:39,000 - INFO - Trading Bot Orchestrator initialized
+2025-10-13 08:11:39,001 - INFO - ==================================================
+2025-10-13 08:11:39,001 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-13 08:11:39,001 - INFO - ==================================================
+2025-10-13 08:11:39,001 - INFO - STEP 1: Document Extraction
+2025-10-13 08:11:39,001 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-13 08:11:39,296 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-13 08:11:41,268 - INFO - Successfully extracted text from 1 documents
+2025-10-13 08:11:41,269 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-13 08:11:41,269 - INFO - STEP 2: NLP Analysis
+2025-10-13 08:11:41,269 - INFO - Starting NLP analysis of documents
+2025-10-13 08:11:41,269 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-13 08:11:42,755 - ERROR - Error in text summarization: name 'torch' is not defined
+2025-10-13 08:11:43,216 - ERROR - Error in sentiment analysis: name 'torch' is not defined
+2025-10-13 08:11:43,225 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-10-13 08:11:43,226 - INFO - NLP analysis completed for 1 documents
+2025-10-13 08:11:43,226 - INFO - STEP 3: Signal Generation
+2025-10-13 08:11:43,226 - INFO - Generating trading signals
+2025-10-13 08:11:43,227 - INFO - Generated 5 trading signals from analysis
+2025-10-13 08:11:43,227 - INFO - Filtered 5 signals to 0 high-confidence signals (threshold: 0.7)
+2025-10-13 08:11:43,227 - INFO - Generated 0 high-confidence trading signals
+2025-10-13 08:11:43,227 - INFO - STEP 4: Risk Management
+2025-10-13 08:11:43,228 - INFO - Applying risk management to signals
+2025-10-13 08:11:43,228 - ERROR - Workflow failed: No trading signals available. Run generate_signals() first.
+2025-10-13 08:11:43,229 - ERROR - Trading bot execution failed: No trading signals available. Run generate_signals() first.

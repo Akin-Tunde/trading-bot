@@ -1,0 +1,134 @@
+{
+  "cash": 42561.353617977795,
+  "positions": {
+    "AAPL": {
+      "quantity": 90.52320389818124,
+      "avg_price": 151.65172473834437,
+      "market_value": 13669.003788625367
+    },
+    "MSFT": {
+      "quantity": 45.40140217361488,
+      "avg_price": 302.2875648888777,
+      "market_value": 13678.98846088843
+    },
+    "SPY": {
+      "quantity": 14.808553270091739,
+      "avg_price": 425.88,
+      "market_value": 6306.66666666667
+    },
+    "NVDA": {
+      "quantity": 78.76692415844357,
+      "avg_price": 100.21,
+      "market_value": 7893.23346991763
+    },
+    "GOOGL": {
+      "quantity": 3.108673730817073,
+      "avg_price": 2539.1,
+      "market_value": 7893.23346991763
+    },
+    "AMZN": {
+      "quantity": 2.511297312491094,
+      "avg_price": 3143.09,
+      "market_value": 7893.233469917633
+    }
+  },
+  "trade_history": [
+    {
+      "symbol": "AAPL",
+      "action": "buy",
+      "quantity": 48.75719948317018,
+      "price": 152.21,
+      "total_value": 7421.333333333334,
+      "timestamp": "2025-10-13T08:00:39.316598",
+      "signal_confidence": 0.9276666666666666,
+      "stop_loss": 152.0,
+      "price_target": 176.0,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 6 bullish indicators vs 1 bearish indicators. Key factors mentioned: earnings, growth, momentum. High confidence signal."
+    },
+    {
+      "symbol": "MSFT",
+      "action": "buy",
+      "quantity": 24.481537683358628,
+      "price": 303.14,
+      "total_value": 7421.333333333334,
+      "timestamp": "2025-10-13T08:00:39.317171",
+      "signal_confidence": 0.9276666666666666,
+      "stop_loss": 152.0,
+      "price_target": 176.0,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 6 bullish indicators vs 1 bearish indicators. Key factors mentioned: earnings, growth, momentum. High confidence signal."
+    },
+    {
+      "symbol": "SPY",
+      "action": "buy",
+      "quantity": 14.808553270091739,
+      "price": 425.88,
+      "total_value": 6306.66666666667,
+      "timestamp": "2025-10-13T08:13:49.819184",
+      "signal_confidence": 0.7883333333333334,
+      "stop_loss": 142.5,
+      "price_target": 165.0,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 3 bullish indicators vs 1 bearish indicators. Moderate confidence signal."
+    },
+    {
+      "symbol": "AAPL",
+      "action": "buy",
+      "quantity": 41.766004415011054,
+      "price": 151.0,
+      "total_value": 6306.666666666669,
+      "timestamp": "2025-10-13T08:13:49.819995",
+      "signal_confidence": 0.7883333333333334,
+      "stop_loss": 142.5,
+      "price_target": 165.0,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 3 bullish indicators vs 1 bearish indicators. Moderate confidence signal."
+    },
+    {
+      "symbol": "MSFT",
+      "action": "buy",
+      "quantity": 20.91986449025626,
+      "price": 301.29,
+      "total_value": 6302.945972269309,
+      "timestamp": "2025-10-13T08:13:49.820532",
+      "signal_confidence": 0.7883333333333334,
+      "stop_loss": 142.5,
+      "price_target": 165.0,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 3 bullish indicators vs 1 bearish indicators. Moderate confidence signal."
+    },
+    {
+      "symbol": "NVDA",
+      "action": "buy",
+      "quantity": 78.76692415844357,
+      "price": 100.21,
+      "total_value": 7893.23346991763,
+      "timestamp": "2025-10-13T08:30:20.361659",
+      "signal_confidence": 0.9876842105263159,
+      "stop_loss": 427.5,
+      "price_target": 495.00000000000006,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 8 bullish indicators vs 0 bearish indicators. Key factors mentioned: earnings, revenue growth, AI adoption. High confidence signal."
+    },
+    {
+      "symbol": "GOOGL",
+      "action": "buy",
+      "quantity": 3.108673730817073,
+      "price": 2539.1,
+      "total_value": 7893.23346991763,
+      "timestamp": "2025-10-13T08:30:20.364747",
+      "signal_confidence": 0.9876842105263159,
+      "stop_loss": 427.5,
+      "price_target": 495.00000000000006,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 8 bullish indicators vs 0 bearish indicators. Key factors mentioned: earnings, revenue growth, AI adoption. High confidence signal."
+    },
+    {
+      "symbol": "AMZN",
+      "action": "buy",
+      "quantity": 2.511297312491094,
+      "price": 3143.09,
+      "total_value": 7893.233469917633,
+      "timestamp": "2025-10-13T08:30:20.366671",
+      "signal_confidence": 0.9876842105263159,
+      "stop_loss": 427.5,
+      "price_target": 495.00000000000006,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 8 bullish indicators vs 0 bearish indicators. Key factors mentioned: earnings, revenue growth, AI adoption. High confidence signal."
+    }
+  ],
+  "last_updated": "2025-10-13T08:30:20.366697"
+}
