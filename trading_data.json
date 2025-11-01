@@ -1,5 +1,5 @@
 {
-  "cash": 42561.353617977795,
+  "cash": 1571.601372163781,
   "positions": {
     "AAPL": {
       "quantity": 90.52320389818124,
@@ -30,6 +30,46 @@
       "quantity": 2.511297312491094,
       "avg_price": 3143.09,
       "market_value": 7893.233469917633
+    },
+    "IMA": {
+      "quantity": 45.18643497909284,
+      "avg_price": 100.81,
+      "market_value": 4555.244510242349
+    },
+    "EE": {
+      "quantity": 46.36853125246691,
+      "avg_price": 98.24,
+      "market_value": 4555.244510242349
+    },
+    "JACM": {
+      "quantity": 44.7469991182942,
+      "avg_price": 101.8,
+      "market_value": 4555.244510242349
+    },
+    "IEEE": {
+      "quantity": 92.06101498543046,
+      "avg_price": 98.96142272520589,
+      "market_value": 9056.042044116795
+    },
+    "HOSVD": {
+      "quantity": 45.980059657235785,
+      "avg_price": 99.07,
+      "market_value": 4555.244510242349
+    },
+    "GM": {
+      "quantity": 46.211548194478006,
+      "avg_price": 98.52,
+      "market_value": 4552.761728119973
+    },
+    "SVD": {
+      "quantity": 45.87165469138512,
+      "avg_price": 99.25,
+      "market_value": 4552.761728119973
+    },
+    "NP": {
+      "quantity": 45.839324689085515,
+      "avg_price": 99.32,
+      "market_value": 4552.761728119973
     }
   },
   "trade_history": [
@@ -128,7 +168,115 @@
       "stop_loss": 427.5,
       "price_target": 495.00000000000006,
       "reasoning": "Sentiment analysis indicates positive market outlook. 8 bullish indicators vs 0 bearish indicators. Key factors mentioned: earnings, revenue growth, AI adoption. High confidence signal."
+    },
+    {
+      "symbol": "IMA",
+      "action": "buy",
+      "quantity": 45.18643497909284,
+      "price": 100.81,
+      "total_value": 4555.244510242349,
+      "timestamp": "2025-10-15T04:36:24.263911",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
+    },
+    {
+      "symbol": "EE",
+      "action": "buy",
+      "quantity": 46.36853125246691,
+      "price": 98.24,
+      "total_value": 4555.244510242349,
+      "timestamp": "2025-10-15T04:36:24.265817",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
+    },
+    {
+      "symbol": "JACM",
+      "action": "buy",
+      "quantity": 44.7469991182942,
+      "price": 101.8,
+      "total_value": 4555.244510242349,
+      "timestamp": "2025-10-15T04:36:24.267479",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
+    },
+    {
+      "symbol": "IEEE",
+      "action": "buy",
+      "quantity": 45.75376165369977,
+      "price": 99.56,
+      "total_value": 4555.244510242349,
+      "timestamp": "2025-10-15T04:36:24.269590",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
+    },
+    {
+      "symbol": "HOSVD",
+      "action": "buy",
+      "quantity": 45.980059657235785,
+      "price": 99.07,
+      "total_value": 4555.244510242349,
+      "timestamp": "2025-10-15T04:36:24.271301",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
+    },
+    {
+      "symbol": "IEEE",
+      "action": "buy",
+      "quantity": 46.3072533317307,
+      "price": 98.37,
+      "total_value": 4555.244510242349,
+      "timestamp": "2025-10-15T08:18:32.688107",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
+    },
+    {
+      "symbol": "GM",
+      "action": "buy",
+      "quantity": 46.211548194478006,
+      "price": 98.52,
+      "total_value": 4552.761728119973,
+      "timestamp": "2025-10-15T08:18:32.690406",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
+    },
+    {
+      "symbol": "SVD",
+      "action": "buy",
+      "quantity": 45.87165469138512,
+      "price": 99.25,
+      "total_value": 4552.761728119973,
+      "timestamp": "2025-10-15T08:18:32.692367",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
+    },
+    {
+      "symbol": "NP",
+      "action": "buy",
+      "quantity": 45.839324689085515,
+      "price": 99.32,
+      "total_value": 4552.761728119973,
+      "timestamp": "2025-10-15T08:18:32.694223",
+      "signal_confidence": 0.7600000000000001,
+      "stop_loss": null,
+      "price_target": null,
+      "reasoning": "Sentiment analysis indicates positive market outlook. 4 bullish indicators vs 1 bearish indicators. Key factors mentioned: volume, loss. Moderate confidence signal."
     }
   ],
-  "last_updated": "2025-10-13T08:30:20.366697"
+  "last_updated": "2025-10-15T09:02:28.336633"
 }

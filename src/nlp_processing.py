@@ -1,9 +1,33 @@
 import re
 import logging
 from typing import Dict, List, Optional, Tuple
-from transformers import pipeline
 
+# Try to import transformer pipelines and torch; if unavailable, we'll fall back
 logger = logging.getLogger(__name__)
+
+HAS_TRANSFORMERS = False
+HAS_TORCH = False
+try:
+    from transformers import pipeline
+    HAS_TRANSFORMERS = True
+    try:
+        import torch  # noqa: F401
+        HAS_TORCH = True
+    except Exception:
+        HAS_TORCH = False
+except Exception:
+    HAS_TRANSFORMERS = False
+
+
+def _simple_sentence_summary(text: str, max_sentences: int = 3) -> str:
+    """Lightweight fallback summarizer: pick the first meaningful sentences."""
+    sentences = re.split(r'(?<=[.!?])\s+', text.strip())
+    meaningful = [s.strip() for s in sentences if len(s.strip()) > 30]
+    if not meaningful:
+        # Fallback to truncation
+        return (text[:150] + '...') if len(text) > 150 else text
+    return ' '.join(meaningful[:max_sentences])
+
 
 def summarize_text(text: str, max_length: int = 150, min_length: int = 40) -> str:
     """
@@ -17,36 +41,33 @@ def summarize_text(text: str, max_length: int = 150, min_length: int = 40) -> st
     Returns:
         Summarized text
     """
-    try:
-        # Handle very long texts by chunking
-        if len(text) > 1024:
-            # Split into chunks and summarize each
-            chunks = [text[i:i+1024] for i in range(0, len(text), 1024)]
-            summaries = []
-            
-            summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-            
-            for chunk in chunks[:3]:  # Limit to first 3 chunks to avoid overload
-                if len(chunk.strip()) > 50:  # Only summarize meaningful chunks
-                    summary = summarizer(chunk, max_length=100, min_length=20, do_sample=False)
-                    summaries.append(summary[0]['summary_text'])
-            
-            # Combine and re-summarize if needed
-            combined_summary = " ".join(summaries)
-            if len(combined_summary) > max_length * 2:
-                final_summary = summarizer(combined_summary, max_length=max_length, min_length=min_length, do_sample=False)
-                return final_summary[0]['summary_text']
+    # Use transformer summarizer when available and torch present
+    if HAS_TRANSFORMERS and HAS_TORCH:
+        try:
+            # Handle very long texts by chunking
+            if len(text) > 1024:
+                chunks = [text[i:i+1024] for i in range(0, len(text), 1024)]
+                summaries = []
+                summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+                for chunk in chunks[:3]:
+                    if len(chunk.strip()) > 50:
+                        summary = summarizer(chunk, max_length=100, min_length=20, do_sample=False)
+                        summaries.append(summary[0]['summary_text'])
+                combined_summary = " ".join(summaries)
+                if len(combined_summary) > max_length * 2:
+                    final_summary = summarizer(combined_summary, max_length=max_length, min_length=min_length, do_sample=False)
+                    return final_summary[0]['summary_text']
+                else:
+                    return combined_summary
             else:
-                return combined_summary
-        else:
-            summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-            summary = summarizer(text, max_length=max_length, min_length=min_length, do_sample=False)
-            return summary[0]['summary_text']
-    
-    except Exception as e:
-        logger.error(f"Error in text summarization: {e}")
-        # Fallback to simple truncation
-        return text[:max_length] + "..." if len(text) > max_length else text
+                summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+                summary = summarizer(text, max_length=max_length, min_length=min_length, do_sample=False)
+                return summary[0]['summary_text']
+        except Exception as e:
+            logger.warning("Transformer summarization failed, falling back: %s", e)
+
+    # Lightweight fallback summarizer
+    return _simple_sentence_summary(text, max_sentences=3)
 
 
 def analyze_sentiment(text: str) -> Dict[str, float]:
@@ -59,54 +80,53 @@ def analyze_sentiment(text: str) -> Dict[str, float]:
     Returns:
         Dictionary with sentiment scores
     """
-    try:
-        sentiment_analyzer = pipeline("sentiment-analysis", model="cardiffnlp/twitter-roberta-base-sentiment-latest")
-        
-        # Handle long texts by analyzing chunks
-        if len(text) > 512:
-            chunks = [text[i:i+512] for i in range(0, min(len(text), 2048), 512)]  # Limit analysis
-            sentiments = []
-            
-            for chunk in chunks:
-                if len(chunk.strip()) > 20:
-                    result = sentiment_analyzer(chunk)[0]
-                    sentiments.append({
-                        'label': result['label'],
-                        'score': result['score']
-                    })
-            
-            # Aggregate sentiments
-            if sentiments:
-                positive_scores = [s['score'] for s in sentiments if s['label'] in ['LABEL_2', 'positive']]
-                negative_scores = [s['score'] for s in sentiments if s['label'] in ['LABEL_0', 'negative']]
-                neutral_scores = [s['score'] for s in sentiments if s['label'] in ['LABEL_1', 'neutral']]
-                
+    # If transformers + torch available, use model-based sentiment
+    if HAS_TRANSFORMERS and HAS_TORCH:
+        try:
+            sentiment_analyzer = pipeline("sentiment-analysis", model="cardiffnlp/twitter-roberta-base-sentiment-latest")
+            if len(text) > 512:
+                chunks = [text[i:i+512] for i in range(0, min(len(text), 2048), 512)]
+                sentiments = []
+                for chunk in chunks:
+                    if len(chunk.strip()) > 20:
+                        result = sentiment_analyzer(chunk)[0]
+                        sentiments.append({'label': result['label'], 'score': result['score']})
+                if sentiments:
+                    positive_scores = [s['score'] for s in sentiments if s['label'] in ['LABEL_2', 'positive']]
+                    negative_scores = [s['score'] for s in sentiments if s['label'] in ['LABEL_0', 'negative']]
+                    neutral_scores = [s['score'] for s in sentiments if s['label'] in ['LABEL_1', 'neutral']]
+                    return {
+                        'positive': sum(positive_scores) / len(positive_scores) if positive_scores else 0.0,
+                        'negative': sum(negative_scores) / len(negative_scores) if negative_scores else 0.0,
+                        'neutral': sum(neutral_scores) / len(neutral_scores) if neutral_scores else 0.0,
+                        'overall_sentiment': 'positive' if len(positive_scores) > len(negative_scores) else 'negative' if len(negative_scores) > len(positive_scores) else 'neutral'
+                    }
+            else:
+                result = sentiment_analyzer(text)[0]
+                label_mapping = {'LABEL_0': 'negative', 'LABEL_1': 'neutral', 'LABEL_2': 'positive'}
+                sentiment = label_mapping.get(result['label'], result['label'].lower())
                 return {
-                    'positive': sum(positive_scores) / len(positive_scores) if positive_scores else 0.0,
-                    'negative': sum(negative_scores) / len(negative_scores) if negative_scores else 0.0,
-                    'neutral': sum(neutral_scores) / len(neutral_scores) if neutral_scores else 0.0,
-                    'overall_sentiment': 'positive' if len(positive_scores) > len(negative_scores) else 'negative' if len(negative_scores) > len(positive_scores) else 'neutral'
+                    'positive': result['score'] if sentiment == 'positive' else 0.0,
+                    'negative': result['score'] if sentiment == 'negative' else 0.0,
+                    'neutral': result['score'] if sentiment == 'neutral' else 0.0,
+                    'overall_sentiment': sentiment
                 }
-        else:
-            result = sentiment_analyzer(text)[0]
-            label_mapping = {'LABEL_0': 'negative', 'LABEL_1': 'neutral', 'LABEL_2': 'positive'}
-            sentiment = label_mapping.get(result['label'], result['label'].lower())
-            
-            return {
-                'positive': result['score'] if sentiment == 'positive' else 0.0,
-                'negative': result['score'] if sentiment == 'negative' else 0.0,
-                'neutral': result['score'] if sentiment == 'neutral' else 0.0,
-                'overall_sentiment': sentiment
-            }
-    
-    except Exception as e:
-        logger.error(f"Error in sentiment analysis: {e}")
-        return {
-            'positive': 0.0,
-            'negative': 0.0,
-            'neutral': 1.0,
-            'overall_sentiment': 'neutral'
-        }
+        except Exception as e:
+            logger.warning("Transformer sentiment failed, falling back: %s", e)
+
+    # Simple rule-based sentiment fallback
+    text_lower = text.lower()
+    positive_words = ['gain', 'growth', 'bull', 'buy', 'positive', 'beat', 'upgrade', 'strong', 'outperform', 'rally']
+    negative_words = ['loss', 'decline', 'fall', 'drop', 'bear', 'sell', 'downgrade', 'weak', 'underperform', 'crash']
+    pos = sum(text_lower.count(w) for w in positive_words)
+    neg = sum(text_lower.count(w) for w in negative_words)
+    total = pos + neg
+    if total == 0:
+        return {'positive': 0.0, 'negative': 0.0, 'neutral': 1.0, 'overall_sentiment': 'neutral'}
+    pos_score = pos / total
+    neg_score = neg / total
+    overall = 'positive' if pos > neg else 'negative' if neg > pos else 'neutral'
+    return {'positive': pos_score, 'negative': neg_score, 'neutral': 0.0 if overall != 'neutral' else 1.0, 'overall_sentiment': overall}
 
 
 def extract_trading_signals(text: str) -> Dict[str, List]:

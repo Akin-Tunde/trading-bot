@@ -45,3 +45,378 @@
 2025-10-13 08:11:43,228 - INFO - Applying risk management to signals
 2025-10-13 08:11:43,228 - ERROR - Workflow failed: No trading signals available. Run generate_signals() first.
 2025-10-13 08:11:43,229 - ERROR - Trading bot execution failed: No trading signals available. Run generate_signals() first.
+2025-10-14 16:48:32,165 - INFO - Trading Bot Orchestrator initialized
+2025-10-14 16:48:32,165 - INFO - ==================================================
+2025-10-14 16:48:32,166 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-14 16:48:32,166 - INFO - ==================================================
+2025-10-14 16:48:32,166 - INFO - STEP 1: Document Extraction
+2025-10-14 16:48:32,166 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-14 16:48:32,580 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-14 16:48:34,898 - INFO - Successfully extracted text from 1 documents
+2025-10-14 16:48:34,899 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-14 16:48:34,899 - INFO - STEP 2: NLP Analysis
+2025-10-14 16:48:34,899 - INFO - Starting NLP analysis of documents
+2025-10-14 16:48:34,899 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-14 16:48:35,720 - ERROR - Error in text summarization: name 'torch' is not defined
+2025-10-14 16:48:36,119 - ERROR - Error in sentiment analysis: name 'torch' is not defined
+2025-10-14 16:48:36,129 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-10-14 16:48:36,130 - INFO - NLP analysis completed for 1 documents
+2025-10-14 16:48:36,130 - INFO - STEP 3: Signal Generation
+2025-10-14 16:48:36,131 - INFO - Generating trading signals
+2025-10-14 16:48:36,131 - INFO - Generated 5 trading signals from analysis
+2025-10-14 16:48:36,132 - INFO - Filtered 5 signals to 0 high-confidence signals (threshold: 0.7)
+2025-10-14 16:48:36,132 - INFO - Generated 0 high-confidence trading signals
+2025-10-14 16:48:36,133 - INFO - STEP 4: Risk Management
+2025-10-14 16:48:36,133 - INFO - Applying risk management to signals
+2025-10-14 16:48:36,133 - ERROR - Workflow failed: No trading signals available. Run generate_signals() first.
+2025-10-14 16:48:36,133 - ERROR - Trading bot execution failed: No trading signals available. Run generate_signals() first.
+2025-10-15 02:38:54,657 - INFO - Trading Bot Orchestrator initialized
+2025-10-15 02:38:54,673 - INFO - ==================================================
+2025-10-15 02:38:54,673 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-15 02:38:54,673 - INFO - ==================================================
+2025-10-15 02:38:54,673 - INFO - STEP 1: Document Extraction
+2025-10-15 02:38:54,673 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-15 02:38:55,063 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-15 02:38:56,983 - INFO - Successfully extracted text from 1 documents
+2025-10-15 02:38:56,983 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-15 02:38:56,983 - INFO - STEP 2: NLP Analysis
+2025-10-15 02:38:56,984 - INFO - Starting NLP analysis of documents
+2025-10-15 02:38:56,984 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-15 02:38:59,629 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-10-15 02:52:21,286 - WARNING - Error while downloading from https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-10-15 02:52:33,620 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF23E90>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 11bddf02-5bd3-4225-be56-c723e109e4a3)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 02:52:33,621 - WARNING - Retrying in 1s [Retry 1/5].
+2025-10-15 02:52:34,625 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3C610>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 294651ba-e9b2-4657-808f-f77a1c6579fc)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 02:52:34,626 - WARNING - Retrying in 2s [Retry 2/5].
+2025-10-15 02:52:36,630 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3DDD0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 11aa012b-dbf6-4b9a-ae75-c10854145d5b)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 02:52:36,632 - WARNING - Retrying in 4s [Retry 3/5].
+2025-10-15 02:52:52,480 - WARNING - '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 7af77976-7b9f-4743-8f1b-bdffa8600afd)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 02:52:52,482 - WARNING - Retrying in 8s [Retry 4/5].
+2025-10-15 02:53:10,923 - WARNING - '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: f8c65ca8-c6ff-450a-9f05-cf6c8c071edf)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 02:53:10,925 - WARNING - Retrying in 8s [Retry 5/5].
+2025-10-15 03:06:20,274 - WARNING - Error while downloading from https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-10-15 03:06:21,286 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF29DA50>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: b257b01f-ab0d-4e96-8c7a-271597cf242c)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:21,291 - WARNING - Retrying in 1s [Retry 1/5].
+2025-10-15 03:06:22,296 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3FD90>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: bef9a935-f0cf-4661-9581-3d0b4948d8cd)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:22,297 - WARNING - Retrying in 2s [Retry 2/5].
+2025-10-15 03:06:24,299 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3EC50>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 46bf2c40-824f-466c-b828-2c69bd419097)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:24,300 - WARNING - Retrying in 4s [Retry 3/5].
+2025-10-15 03:06:28,304 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3DED0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 18b0b801-af95-49da-8e65-cbf7d28569c7)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:28,304 - WARNING - Retrying in 8s [Retry 4/5].
+2025-10-15 03:06:36,310 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3C550>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: ee89f791-969c-41da-8b13-776d3b48ddbe)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:36,311 - WARNING - Retrying in 8s [Retry 5/5].
+2025-10-15 03:06:44,315 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF225D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: b4f64517-54a7-4c1c-bacd-b464b233e515)')' thrown while requesting GET https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:44,366 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF29FB90>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 514a757b-507a-4895-9b7e-10fc108659ad)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:44,367 - WARNING - Retrying in 1s [Retry 1/5].
+2025-10-15 03:06:45,371 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2AC750>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 4590c54e-89c2-46fc-b10c-569dc0932507)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:45,372 - WARNING - Retrying in 2s [Retry 2/5].
+2025-10-15 03:06:47,377 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2AD490>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: f5c84547-3794-41e8-9f4d-1aaad96765e7)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:47,378 - WARNING - Retrying in 4s [Retry 3/5].
+2025-10-15 03:06:51,382 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2AE1D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: e52ff3d9-14af-4323-8273-d29bf48f64c6)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:51,383 - WARNING - Retrying in 8s [Retry 4/5].
+2025-10-15 03:06:59,387 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2AEF10>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 9a5ca6c7-7d49-457d-8474-8bac1c55d78c)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:06:59,389 - WARNING - Retrying in 8s [Retry 5/5].
+2025-10-15 03:07:07,394 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2AFC50>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: c9458878-cc41-440a-ad3c-e2b9255ed8e0)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors
+2025-10-15 03:07:07,404 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors.index.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3E750>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 6e1a7507-15e7-40e7-8660-56a3a9057681)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors.index.json
+2025-10-15 03:07:07,405 - WARNING - Retrying in 1s [Retry 1/5].
+2025-10-15 03:07:08,414 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors.index.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3DFD0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 820b983e-7dbc-4513-92c5-2536ceda8d06)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors.index.json
+2025-10-15 03:07:08,415 - WARNING - Retrying in 2s [Retry 2/5].
+2025-10-15 03:07:10,420 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors.index.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEEF3EE90>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: fb8e42b2-4125-4c36-9b14-5c9f8734043e)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors.index.json
+2025-10-15 03:07:10,421 - WARNING - Retrying in 4s [Retry 3/5].
+2025-10-15 03:07:14,426 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors.index.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2AF6D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: da1ec469-8afe-4d3d-82d6-b85250d3234a)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors.index.json
+2025-10-15 03:07:14,427 - WARNING - Retrying in 8s [Retry 4/5].
+2025-10-15 03:07:22,432 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors.index.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2ADC10>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 9beed79a-efe5-49f4-9616-516458bebc3c)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors.index.json
+2025-10-15 03:07:22,433 - WARNING - Retrying in 8s [Retry 5/5].
+2025-10-15 03:07:30,438 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/model.safetensors.index.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2AD4D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: b12bbf6b-4ba6-4765-bfeb-b923ef69947d)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/model.safetensors.index.json
+2025-10-15 03:07:30,445 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2B13D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: fc21ee5f-4fe5-4f6c-b515-d40d1ce763c0)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/pytorch_model.bin
+2025-10-15 03:07:30,445 - WARNING - Retrying in 1s [Retry 1/5].
+2025-10-15 03:07:31,447 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2B1F50>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 633db442-055b-42d6-b202-fd8a6003c598)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/pytorch_model.bin
+2025-10-15 03:07:31,448 - WARNING - Retrying in 2s [Retry 2/5].
+2025-10-15 03:07:33,452 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /facebook/bart-large-cnn/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000024DEF2B2C90>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: fef195f7-68a9-4317-af7f-b0de573f0a40)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-cnn/resolve/main/pytorch_model.bin
+2025-10-15 03:07:33,453 - WARNING - Retrying in 4s [Retry 3/5].
+2025-10-15 03:07:37,949 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-10-15 04:34:08,227 - INFO - Trading Bot Orchestrator initialized
+2025-10-15 04:34:08,227 - INFO - ==================================================
+2025-10-15 04:34:08,227 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-15 04:34:08,227 - INFO - ==================================================
+2025-10-15 04:34:08,228 - INFO - STEP 1: Document Extraction
+2025-10-15 04:34:08,228 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-15 04:34:08,609 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-15 04:34:11,036 - INFO - Successfully extracted text from 1 documents
+2025-10-15 04:34:11,037 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-15 04:34:11,037 - INFO - STEP 2: NLP Analysis
+2025-10-15 04:34:11,037 - INFO - Starting NLP analysis of documents
+2025-10-15 04:34:11,038 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-15 04:34:11,911 - ERROR - Error in text summarization: name 'torch' is not defined
+2025-10-15 04:34:12,268 - ERROR - Error in sentiment analysis: name 'torch' is not defined
+2025-10-15 04:34:12,276 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-10-15 04:34:12,276 - INFO - NLP analysis completed for 1 documents
+2025-10-15 04:34:12,276 - INFO - STEP 3: Signal Generation
+2025-10-15 04:34:12,277 - INFO - Generating trading signals
+2025-10-15 04:34:12,277 - INFO - Generated 5 trading signals from analysis
+2025-10-15 04:34:12,278 - INFO - Filtered 5 signals to 0 high-confidence signals (threshold: 0.7)
+2025-10-15 04:34:12,278 - INFO - Generated 0 high-confidence trading signals
+2025-10-15 04:34:12,278 - INFO - STEP 4: Risk Management
+2025-10-15 04:34:12,278 - INFO - Applying risk management to signals
+2025-10-15 04:34:12,279 - ERROR - Workflow failed: No trading signals available. Run generate_signals() first.
+2025-10-15 04:34:12,279 - ERROR - Trading bot execution failed: No trading signals available. Run generate_signals() first.
+2025-10-15 04:36:21,450 - INFO - Trading Bot Orchestrator initialized
+2025-10-15 04:36:21,450 - INFO - ==================================================
+2025-10-15 04:36:21,451 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-15 04:36:21,451 - INFO - ==================================================
+2025-10-15 04:36:21,451 - INFO - STEP 1: Document Extraction
+2025-10-15 04:36:21,452 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-15 04:36:21,820 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-15 04:36:24,215 - INFO - Successfully extracted text from 1 documents
+2025-10-15 04:36:24,216 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-15 04:36:24,216 - INFO - STEP 2: NLP Analysis
+2025-10-15 04:36:24,216 - INFO - Starting NLP analysis of documents
+2025-10-15 04:36:24,216 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-15 04:36:24,226 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-10-15 04:36:24,226 - INFO - NLP analysis completed for 1 documents
+2025-10-15 04:36:24,226 - INFO - STEP 3: Signal Generation
+2025-10-15 04:36:24,226 - INFO - Generating trading signals
+2025-10-15 04:36:24,227 - INFO - Generated 5 trading signals from analysis
+2025-10-15 04:36:24,227 - INFO - Filtered 5 signals to 5 high-confidence signals (threshold: 0.7)
+2025-10-15 04:36:24,227 - INFO - Generated 5 high-confidence trading signals
+2025-10-15 04:36:24,228 - INFO - STEP 4: Risk Management
+2025-10-15 04:36:24,228 - INFO - Applying risk management to signals
+2025-10-15 04:36:24,228 - INFO - Risk controls applied to IMA: position=0.046, risk_score=2.1
+2025-10-15 04:36:24,228 - INFO - Risk controls applied to EE: position=0.046, risk_score=2.1
+2025-10-15 04:36:24,229 - INFO - Risk controls applied to JACM: position=0.046, risk_score=2.1
+2025-10-15 04:36:24,229 - INFO - Risk controls applied to IEEE: position=0.046, risk_score=2.1
+2025-10-15 04:36:24,229 - INFO - Risk controls applied to HOSVD: position=0.046, risk_score=2.1
+2025-10-15 04:36:24,230 - INFO - Risk management applied: 5 signals approved
+2025-10-15 04:36:24,230 - INFO - STEP 5: Trade Execution
+2025-10-15 04:36:24,230 - INFO - Executing 5 trading signals
+2025-10-15 04:36:24,230 - INFO - Running in paper trading mode
+2025-10-15 04:36:24,261 - INFO - Loaded portfolio data from trading_data.json
+2025-10-15 04:36:24,263 - INFO - Trade executor initialized in paper mode
+2025-10-15 04:36:24,263 - INFO - Starting batch execution of 5 signals in paper mode
+2025-10-15 04:36:24,263 - INFO - Executing signal 1/5: IMA
+2025-10-15 04:36:24,263 - INFO - BUY executed: 45.19 shares of IMA at $100.81
+2025-10-15 04:36:24,265 - INFO - Executing signal 2/5: EE
+2025-10-15 04:36:24,265 - INFO - BUY executed: 46.37 shares of EE at $98.24
+2025-10-15 04:36:24,267 - INFO - Executing signal 3/5: JACM
+2025-10-15 04:36:24,267 - INFO - BUY executed: 44.75 shares of JACM at $101.80
+2025-10-15 04:36:24,269 - INFO - Executing signal 4/5: IEEE
+2025-10-15 04:36:24,269 - INFO - BUY executed: 45.75 shares of IEEE at $99.56
+2025-10-15 04:36:24,271 - INFO - Executing signal 5/5: HOSVD
+2025-10-15 04:36:24,271 - INFO - BUY executed: 45.98 shares of HOSVD at $99.07
+2025-10-15 04:36:24,272 - INFO - Batch execution completed. Portfolio value: $99,895.71
+2025-10-15 04:36:24,272 - INFO - Trading execution completed
+2025-10-15 04:36:24,273 - INFO - ==================================================
+2025-10-15 04:36:24,273 - INFO - AI Trading Bot Workflow Completed Successfully
+2025-10-15 04:36:24,273 - INFO - Documents processed: 1
+2025-10-15 04:36:24,273 - INFO - Signals generated: 5
+2025-10-15 04:36:24,274 - INFO - Trades executed: 5
+2025-10-15 04:36:24,274 - INFO - ==================================================
+2025-10-15 08:18:29,538 - INFO - Trading Bot Orchestrator initialized
+2025-10-15 08:18:29,538 - INFO - ==================================================
+2025-10-15 08:18:29,538 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-15 08:18:29,539 - INFO - ==================================================
+2025-10-15 08:18:29,539 - INFO - STEP 1: Document Extraction
+2025-10-15 08:18:29,539 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-15 08:18:29,948 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-15 08:18:32,652 - INFO - Successfully extracted text from 1 documents
+2025-10-15 08:18:32,653 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-15 08:18:32,653 - INFO - STEP 2: NLP Analysis
+2025-10-15 08:18:32,653 - INFO - Starting NLP analysis of documents
+2025-10-15 08:18:32,653 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-15 08:18:32,666 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-10-15 08:18:32,666 - INFO - NLP analysis completed for 1 documents
+2025-10-15 08:18:32,667 - INFO - STEP 3: Signal Generation
+2025-10-15 08:18:32,667 - INFO - Generating trading signals
+2025-10-15 08:18:32,668 - INFO - Generated 5 trading signals from analysis
+2025-10-15 08:18:32,668 - INFO - Filtered 5 signals to 5 high-confidence signals (threshold: 0.7)
+2025-10-15 08:18:32,668 - INFO - Generated 5 high-confidence trading signals
+2025-10-15 08:18:32,669 - INFO - STEP 4: Risk Management
+2025-10-15 08:18:32,669 - INFO - Applying risk management to signals
+2025-10-15 08:18:32,669 - INFO - Risk controls applied to IEEE: position=0.046, risk_score=2.1
+2025-10-15 08:18:32,670 - INFO - Risk controls applied to GM: position=0.046, risk_score=2.1
+2025-10-15 08:18:32,670 - INFO - Risk controls applied to SVD: position=0.046, risk_score=2.1
+2025-10-15 08:18:32,670 - INFO - Risk controls applied to NP: position=0.046, risk_score=2.1
+2025-10-15 08:18:32,671 - INFO - Risk controls applied to DMS: position=0.046, risk_score=2.1
+2025-10-15 08:18:32,671 - INFO - Risk management applied: 5 signals approved
+2025-10-15 08:18:32,671 - INFO - STEP 5: Trade Execution
+2025-10-15 08:18:32,672 - INFO - Executing 5 trading signals
+2025-10-15 08:18:32,672 - INFO - Running in paper trading mode
+2025-10-15 08:18:32,686 - INFO - Loaded portfolio data from trading_data.json
+2025-10-15 08:18:32,687 - INFO - Trade executor initialized in paper mode
+2025-10-15 08:18:32,687 - INFO - Starting batch execution of 5 signals in paper mode
+2025-10-15 08:18:32,687 - INFO - Executing signal 1/5: IEEE
+2025-10-15 08:18:32,688 - INFO - BUY executed: 46.31 shares of IEEE at $98.37
+2025-10-15 08:18:32,689 - INFO - Executing signal 2/5: GM
+2025-10-15 08:18:32,690 - INFO - BUY executed: 46.21 shares of GM at $98.52
+2025-10-15 08:18:32,692 - INFO - Executing signal 3/5: SVD
+2025-10-15 08:18:32,692 - INFO - BUY executed: 45.87 shares of SVD at $99.25
+2025-10-15 08:18:32,693 - INFO - Executing signal 4/5: NP
+2025-10-15 08:18:32,694 - INFO - BUY executed: 45.84 shares of NP at $99.32
+2025-10-15 08:18:32,695 - INFO - Executing signal 5/5: DMS
+2025-10-15 08:18:32,697 - INFO - Batch execution completed. Portfolio value: $99,841.27
+2025-10-15 08:18:32,697 - INFO - Trading execution completed
+2025-10-15 08:18:32,698 - INFO - ==================================================
+2025-10-15 08:18:32,698 - INFO - AI Trading Bot Workflow Completed Successfully
+2025-10-15 08:18:32,699 - INFO - Documents processed: 1
+2025-10-15 08:18:32,699 - INFO - Signals generated: 5
+2025-10-15 08:18:32,700 - INFO - Trades executed: 5
+2025-10-15 08:18:32,700 - INFO - ==================================================
+2025-10-15 08:42:45,454 - INFO - Trading Bot Orchestrator initialized
+2025-10-15 08:42:45,455 - INFO - ==================================================
+2025-10-15 08:42:45,455 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-15 08:42:45,455 - INFO - ==================================================
+2025-10-15 08:42:45,455 - INFO - STEP 1: Document Extraction
+2025-10-15 08:42:45,456 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-15 08:42:45,894 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-15 08:42:48,669 - INFO - Successfully extracted text from 1 documents
+2025-10-15 08:42:48,669 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-15 08:42:48,669 - INFO - STEP 2: NLP Analysis
+2025-10-15 08:42:48,670 - INFO - Starting NLP analysis of documents
+2025-10-15 08:42:48,670 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-15 08:42:48,680 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-10-15 08:42:48,680 - INFO - NLP analysis completed for 1 documents
+2025-10-15 08:42:48,695 - INFO - STEP 3: Signal Generation
+2025-10-15 08:42:48,697 - INFO - Generating trading signals
+2025-10-15 08:42:48,698 - INFO - Generated 5 trading signals from analysis
+2025-10-15 08:42:48,698 - INFO - Filtered 5 signals to 5 high-confidence signals (threshold: 0.7)
+2025-10-15 08:42:48,698 - INFO - Generated 5 high-confidence trading signals
+2025-10-15 08:42:48,699 - INFO - STEP 4: Risk Management
+2025-10-15 08:42:48,699 - INFO - Applying risk management to signals
+2025-10-15 08:42:48,699 - INFO - Risk controls applied to SVD: position=0.046, risk_score=2.1
+2025-10-15 08:42:48,701 - INFO - Risk controls applied to NP: position=0.046, risk_score=2.1
+2025-10-15 08:42:48,701 - INFO - Risk controls applied to HS: position=0.046, risk_score=2.1
+2025-10-15 08:42:48,702 - INFO - Risk controls applied to EE: position=0.046, risk_score=2.1
+2025-10-15 08:42:48,702 - INFO - Risk controls applied to SM: position=0.046, risk_score=2.1
+2025-10-15 08:42:48,703 - INFO - Risk management applied: 5 signals approved
+2025-10-15 08:42:48,703 - INFO - STEP 5: Trade Execution
+2025-10-15 08:42:48,703 - INFO - Executing 5 trading signals
+2025-10-15 08:42:48,703 - INFO - Running in paper trading mode
+2025-10-15 08:42:48,727 - INFO - Loaded portfolio data from trading_data.json
+2025-10-15 08:42:48,727 - INFO - Trade executor initialized in paper mode
+2025-10-15 08:42:48,727 - INFO - Starting batch execution of 5 signals in paper mode
+2025-10-15 08:42:48,728 - INFO - Executing signal 1/5: SVD
+2025-10-15 08:42:48,731 - INFO - Executing signal 2/5: NP
+2025-10-15 08:42:48,733 - INFO - Executing signal 3/5: HS
+2025-10-15 08:42:48,734 - INFO - Executing signal 4/5: EE
+2025-10-15 08:42:48,736 - INFO - Executing signal 5/5: SM
+2025-10-15 08:42:48,737 - INFO - Batch execution completed. Portfolio value: $99,841.27
+2025-10-15 08:42:48,737 - INFO - Trading execution completed
+2025-10-15 08:42:48,737 - INFO - ==================================================
+2025-10-15 08:42:48,738 - INFO - AI Trading Bot Workflow Completed Successfully
+2025-10-15 08:42:48,738 - INFO - Documents processed: 1
+2025-10-15 08:42:48,738 - INFO - Signals generated: 5
+2025-10-15 08:42:48,738 - INFO - Trades executed: 5
+2025-10-15 08:42:48,738 - INFO - ==================================================
+2025-10-15 09:00:18,543 - INFO - Trading Bot Orchestrator initialized
+2025-10-15 09:00:18,544 - INFO - ==================================================
+2025-10-15 09:00:18,544 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-15 09:00:18,545 - INFO - ==================================================
+2025-10-15 09:00:18,545 - INFO - STEP 1: Document Extraction
+2025-10-15 09:00:18,545 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-15 09:00:18,934 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-10-15 09:01:29,856 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:29,858 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:29,963 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:29,965 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:29,969 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:29,971 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:30,451 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:30,644 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:30,646 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:32,694 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:32,696 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:33,650 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:33,652 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:35,445 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:35,447 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:38,984 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:01:38,986 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-10-15 09:02:27,953 - INFO - Successfully extracted text from 13 documents
+2025-10-15 09:02:27,954 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-10-15 09:02:27,954 - INFO - Document: Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf, Length: 657883 characters
+2025-10-15 09:02:27,954 - INFO - Document: Forex  The Ultimate Guide To Price Action Trading.pdf, Length: 98517 characters
+2025-10-15 09:02:27,955 - INFO - Document: Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf, Length: 460911 characters
+2025-10-15 09:02:27,955 - INFO - Document: Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf, Length: 77396 characters
+2025-10-15 09:02:27,955 - INFO - Document: Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf, Length: 203575 characters
+2025-10-15 09:02:27,956 - INFO - Document: Stop Hunt Mastery FOREXIA.pdf, Length: 7131 characters
+2025-10-15 09:02:27,956 - INFO - Document: The Complete Guide To Forex Trading.pdf, Length: 149780 characters
+2025-10-15 09:02:27,957 - INFO - Document: The Monster Guide to Candlestick Patterns.pdf, Length: 31324 characters
+2025-10-15 09:02:27,957 - INFO - Document: The Way of The Superior Trader FOREXIA.pdf, Length: 32132 characters
+2025-10-15 09:02:27,957 - INFO - Document: The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf, Length: 712195 characters
+2025-10-15 09:02:27,957 - INFO - Document: Trade Chart Patterns Like The Pros.pdf, Length: 238373 characters
+2025-10-15 09:02:27,958 - INFO - Document: Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf, Length: 72082 characters
+2025-10-15 09:02:27,958 - INFO - STEP 2: NLP Analysis
+2025-10-15 09:02:27,958 - INFO - Starting NLP analysis of documents
+2025-10-15 09:02:27,958 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-10-15 09:02:27,973 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-10-15 09:02:27,973 - INFO - Analyzing document: Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf
+2025-10-15 09:02:28,040 - INFO - Analysis complete for Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf
+2025-10-15 09:02:28,041 - INFO - Analyzing document: Forex  The Ultimate Guide To Price Action Trading.pdf
+2025-10-15 09:02:28,052 - INFO - Analysis complete for Forex  The Ultimate Guide To Price Action Trading.pdf
+2025-10-15 09:02:28,052 - INFO - Analyzing document: Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf
+2025-10-15 09:02:28,099 - INFO - Analysis complete for Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf
+2025-10-15 09:02:28,099 - INFO - Analyzing document: Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf
+2025-10-15 09:02:28,108 - INFO - Analysis complete for Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf
+2025-10-15 09:02:28,109 - INFO - Analyzing document: Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf
+2025-10-15 09:02:28,131 - INFO - Analysis complete for Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf
+2025-10-15 09:02:28,131 - INFO - Analyzing document: Stop Hunt Mastery FOREXIA.pdf
+2025-10-15 09:02:28,133 - INFO - Analysis complete for Stop Hunt Mastery FOREXIA.pdf
+2025-10-15 09:02:28,133 - INFO - Analyzing document: The Complete Guide To Forex Trading.pdf
+2025-10-15 09:02:28,150 - INFO - Analysis complete for The Complete Guide To Forex Trading.pdf
+2025-10-15 09:02:28,150 - INFO - Analyzing document: The Monster Guide to Candlestick Patterns.pdf
+2025-10-15 09:02:28,154 - INFO - Analysis complete for The Monster Guide to Candlestick Patterns.pdf
+2025-10-15 09:02:28,155 - INFO - Analyzing document: The Way of The Superior Trader FOREXIA.pdf
+2025-10-15 09:02:28,159 - INFO - Analysis complete for The Way of The Superior Trader FOREXIA.pdf
+2025-10-15 09:02:28,159 - INFO - Analyzing document: The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf
+2025-10-15 09:02:28,232 - INFO - Analysis complete for The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf
+2025-10-15 09:02:28,232 - INFO - Analyzing document: Trade Chart Patterns Like The Pros.pdf
+2025-10-15 09:02:28,260 - INFO - Analysis complete for Trade Chart Patterns Like The Pros.pdf
+2025-10-15 09:02:28,260 - INFO - Analyzing document: Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf
+2025-10-15 09:02:28,269 - INFO - Analysis complete for Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf
+2025-10-15 09:02:28,270 - INFO - NLP analysis completed for 13 documents
+2025-10-15 09:02:28,270 - INFO - STEP 3: Signal Generation
+2025-10-15 09:02:28,270 - INFO - Generating trading signals
+2025-10-15 09:02:28,270 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,270 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,271 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,271 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,272 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,272 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,272 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,272 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,272 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,272 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,273 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,273 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,273 - INFO - Generated 5 trading signals from analysis
+2025-10-15 09:02:28,273 - INFO - Filtered 65 signals to 5 high-confidence signals (threshold: 0.7)
+2025-10-15 09:02:28,274 - INFO - Generated 5 high-confidence trading signals
+2025-10-15 09:02:28,274 - INFO - STEP 4: Risk Management
+2025-10-15 09:02:28,274 - INFO - Applying risk management to signals
+2025-10-15 09:02:28,274 - INFO - Risk controls applied to DMS: position=0.046, risk_score=2.1
+2025-10-15 09:02:28,275 - INFO - Risk controls applied to EE: position=0.046, risk_score=2.1
+2025-10-15 09:02:28,275 - INFO - Risk controls applied to IMA: position=0.046, risk_score=2.1
+2025-10-15 09:02:28,275 - INFO - Risk controls applied to ACM: position=0.046, risk_score=2.1
+2025-10-15 09:02:28,276 - INFO - Risk controls applied to VD: position=0.046, risk_score=2.1
+2025-10-15 09:02:28,277 - INFO - Risk management applied: 5 signals approved
+2025-10-15 09:02:28,278 - INFO - STEP 5: Trade Execution
+2025-10-15 09:02:28,278 - INFO - Executing 5 trading signals
+2025-10-15 09:02:28,279 - INFO - Running in paper trading mode
+2025-10-15 09:02:28,313 - INFO - Loaded portfolio data from trading_data.json
+2025-10-15 09:02:28,314 - INFO - Trade executor initialized in paper mode
+2025-10-15 09:02:28,314 - INFO - Starting batch execution of 5 signals in paper mode
+2025-10-15 09:02:28,315 - INFO - Executing signal 1/5: DMS
+2025-10-15 09:02:28,318 - INFO - Executing signal 2/5: EE
+2025-10-15 09:02:28,323 - INFO - Executing signal 3/5: IMA
+2025-10-15 09:02:28,329 - INFO - Executing signal 4/5: ACM
+2025-10-15 09:02:28,336 - INFO - Executing signal 5/5: VD
+2025-10-15 09:02:28,338 - INFO - Batch execution completed. Portfolio value: $99,841.27
+2025-10-15 09:02:28,338 - INFO - Trading execution completed
+2025-10-15 09:02:28,338 - INFO - ==================================================
+2025-10-15 09:02:28,339 - INFO - AI Trading Bot Workflow Completed Successfully
+2025-10-15 09:02:28,339 - INFO - Documents processed: 13
+2025-10-15 09:02:28,340 - INFO - Signals generated: 5
+2025-10-15 09:02:28,340 - INFO - Trades executed: 5
+2025-10-15 09:02:28,341 - INFO - ==================================================

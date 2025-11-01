@@ -1,0 +1,18 @@
+2025-10-15 02:36:24,164 - INFO - Trading Bot Orchestrator initialized
+2025-10-15 02:36:24,164 - INFO - ==================================================
+2025-10-15 02:36:24,164 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-15 02:36:24,164 - INFO - ==================================================
+2025-10-15 02:36:24,179 - INFO - STEP 1: Document Extraction
+2025-10-15 02:36:24,179 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-15 02:36:24,180 - ERROR - Error extracting documents: [WinError 3] The system cannot find the path specified: 'data/pdfs/'
+2025-10-15 02:36:24,180 - ERROR - Workflow failed: [WinError 3] The system cannot find the path specified: 'data/pdfs/'
+2025-10-15 02:36:24,181 - ERROR - Trading bot execution failed: [WinError 3] The system cannot find the path specified: 'data/pdfs/'
+2025-10-15 02:37:36,776 - INFO - Trading Bot Orchestrator initialized
+2025-10-15 02:37:36,776 - INFO - ==================================================
+2025-10-15 02:37:36,776 - INFO - Starting AI Trading Bot Full Workflow
+2025-10-15 02:37:36,776 - INFO - ==================================================
+2025-10-15 02:37:36,776 - INFO - STEP 1: Document Extraction
+2025-10-15 02:37:36,776 - INFO - Extracting text from PDFs in data/pdfs/
+2025-10-15 02:37:36,776 - ERROR - Error extracting documents: [WinError 3] The system cannot find the path specified: 'data/pdfs/'
+2025-10-15 02:37:36,776 - ERROR - Workflow failed: [WinError 3] The system cannot find the path specified: 'data/pdfs/'
+2025-10-15 02:37:36,776 - ERROR - Trading bot execution failed: [WinError 3] The system cannot find the path specified: 'data/pdfs/'
