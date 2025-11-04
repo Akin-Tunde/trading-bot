@@ -16,6 +16,8 @@ from nlp_processing import summarize_text, analyze_sentiment, extract_trading_si
 from signal_engine import generate_trading_signals, filter_signals_by_confidence
 from risk_manager import calculate_position_size, apply_risk_controls
 from trading_api import execute_trades, get_portfolio_status
+# This import connects to the crypto trading logic
+from crypto_forex_trading import CryptoTradingEngine
 
 # Configure logging
 logging.basicConfig(
@@ -31,7 +33,7 @@ logger = logging.getLogger(__name__)
 
 class TradingBotOrchestrator:
     """Main orchestrator class for the AI Trading Bot."""
-    
+
     def __init__(self, pdf_folder: str = "data/pdfs/", config: Optional[Dict] = None):
         """Initialize the trading bot orchestrator.
         
@@ -53,7 +55,7 @@ class TradingBotOrchestrator:
             'risk_tolerance': 0.02,  # 2% risk per trade
             'max_position_size': 0.1,  # 10% max position size
             'confidence_threshold': 0.7,  # 70% minimum confidence for signals
-            'trading_mode': 'paper',  # 'paper' or 'live'
+            'trading_mode': 'live',  # Set to 'live' for testnet connection
             'max_daily_trades': 10,
         }
     
@@ -179,23 +181,27 @@ class TradingBotOrchestrator:
             logger.error(f"Error applying risk management: {e}")
             raise
     
+    # --- THIS IS THE MODIFIED SECTION ---
     def execute_trading(self, signals: List) -> Dict:
-        """Execute trading signals."""
-        logger.info(f"Executing {len(signals)} trading signals")
-        
-        if self.config['trading_mode'] == 'paper':
-            logger.info("Running in paper trading mode")
+        """Execute trading signals by connecting to the Binance Testnet."""
+        logger.info(f"Executing {len(signals)} trading signals in LIVE mode (connecting to Binance Testnet)")
         
         try:
-            execution_results = execute_trades(signals, mode=self.config['trading_mode'])
+            # Initialize the Crypto Trading Engine for Binance Testnet.
+            # The testnet=True flag ensures no real money is used.
+            crypto_engine = CryptoTradingEngine(exchange='binance', testnet=True)
             
-            logger.info("Trading execution completed")
+            # The engine will adapt the bot's stock signals for crypto markets.
+            execution_results = crypto_engine.execute_crypto_trades(signals)
+            
+            logger.info("Crypto testnet trading execution completed")
             return execution_results
-        
+            
         except Exception as e:
-            logger.error(f"Error executing trades: {e}")
+            logger.error(f"Error executing crypto testnet trades: {e}")
             raise
-    
+    # --- END OF MODIFIED SECTION ---
+
     def run_full_workflow(self) -> Dict:
         """Run the complete trading bot workflow."""
         logger.info("="*50)
@@ -271,11 +277,17 @@ def main():
         print("\n" + "="*50)
         print("TRADING BOT EXECUTION SUMMARY")
         print("="*50)
-        print(f"Documents processed: {results['documents_processed']}")
-        print(f"Raw signals generated: {results['raw_signals']}")
-        print(f"Risk-approved signals: {results['risk_approved_signals']}")
-        print(f"Trading mode: {results['config']['trading_mode']}")
-        print(f"Execution timestamp: {results['timestamp']}")
+        print(f"Documents processed: {results.get('documents_processed', 'N/A')}")
+        print(f"Raw signals generated: {results.get('raw_signals', 'N/A')}")
+        print(f"Risk-approved signals: {results.get('risk_approved_signals', 'N/A')}")
+        
+        # Check for crypto-specific results
+        if 'crypto_trades' in results.get('execution_results', {}):
+             print(f"Crypto trades executed: {results['execution_results']['crypto_trades']}")
+             print(f"Crypto pairs traded: {results['execution_results'].get('pairs_traded', [])}")
+        
+        print(f"Trading mode: {results.get('config', {}).get('trading_mode', 'N/A')}")
+        print(f"Execution timestamp: {results.get('timestamp', 'N/A')}")
         print("="*50)
         
         return results

@@ -420,3 +420,298 @@ Trying to resume download...
 2025-10-15 09:02:28,340 - INFO - Signals generated: 5
 2025-10-15 09:02:28,340 - INFO - Trades executed: 5
 2025-10-15 09:02:28,341 - INFO - ==================================================
+2025-11-03 13:37:54,235 - INFO - Trading Bot Orchestrator initialized
+2025-11-03 13:37:54,236 - INFO - ==================================================
+2025-11-03 13:37:54,236 - INFO - Starting AI Trading Bot Full Workflow
+2025-11-03 13:37:54,236 - INFO - ==================================================
+2025-11-03 13:37:54,236 - INFO - STEP 1: Document Extraction
+2025-11-03 13:37:54,237 - INFO - Extracting text from PDFs in data/pdfs/
+2025-11-03 13:37:54,521 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-11-03 13:39:28,053 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:28,062 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:28,423 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:28,427 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:28,442 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:28,448 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:30,186 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:30,877 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:30,883 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:37,240 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:37,245 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:40,473 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:40,478 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:46,959 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:39:46,965 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:40:02,339 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:40:02,344 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 13:41:17,399 - INFO - Successfully extracted text from 13 documents
+2025-11-03 13:41:17,399 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-11-03 13:41:17,400 - INFO - Document: Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf, Length: 657883 characters
+2025-11-03 13:41:17,400 - INFO - Document: Forex  The Ultimate Guide To Price Action Trading.pdf, Length: 98517 characters
+2025-11-03 13:41:17,400 - INFO - Document: Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf, Length: 460911 characters
+2025-11-03 13:41:17,400 - INFO - Document: Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf, Length: 77396 characters
+2025-11-03 13:41:17,400 - INFO - Document: Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf, Length: 203575 characters
+2025-11-03 13:41:17,401 - INFO - Document: Stop Hunt Mastery FOREXIA.pdf, Length: 7131 characters
+2025-11-03 13:41:17,401 - INFO - Document: The Complete Guide To Forex Trading.pdf, Length: 149780 characters
+2025-11-03 13:41:17,401 - INFO - Document: The Monster Guide to Candlestick Patterns.pdf, Length: 31324 characters
+2025-11-03 13:41:17,401 - INFO - Document: The Way of The Superior Trader FOREXIA.pdf, Length: 32132 characters
+2025-11-03 13:41:17,401 - INFO - Document: The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf, Length: 712195 characters
+2025-11-03 13:41:17,402 - INFO - Document: Trade Chart Patterns Like The Pros.pdf, Length: 238373 characters
+2025-11-03 13:41:17,402 - INFO - Document: Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf, Length: 72082 characters
+2025-11-03 13:41:17,402 - INFO - STEP 2: NLP Analysis
+2025-11-03 13:41:17,402 - INFO - Starting NLP analysis of documents
+2025-11-03 13:41:17,402 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-11-03 13:41:17,415 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-11-03 13:41:17,416 - INFO - Analyzing document: Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf
+2025-11-03 13:41:17,481 - INFO - Analysis complete for Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf
+2025-11-03 13:41:17,482 - INFO - Analyzing document: Forex  The Ultimate Guide To Price Action Trading.pdf
+2025-11-03 13:41:17,496 - INFO - Analysis complete for Forex  The Ultimate Guide To Price Action Trading.pdf
+2025-11-03 13:41:17,496 - INFO - Analyzing document: Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf
+2025-11-03 13:41:17,558 - INFO - Analysis complete for Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf
+2025-11-03 13:41:17,559 - INFO - Analyzing document: Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf
+2025-11-03 13:41:17,568 - INFO - Analysis complete for Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf
+2025-11-03 13:41:17,568 - INFO - Analyzing document: Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf
+2025-11-03 13:41:17,594 - INFO - Analysis complete for Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf
+2025-11-03 13:41:17,595 - INFO - Analyzing document: Stop Hunt Mastery FOREXIA.pdf
+2025-11-03 13:41:17,597 - INFO - Analysis complete for Stop Hunt Mastery FOREXIA.pdf
+2025-11-03 13:41:17,598 - INFO - Analyzing document: The Complete Guide To Forex Trading.pdf
+2025-11-03 13:41:17,622 - INFO - Analysis complete for The Complete Guide To Forex Trading.pdf
+2025-11-03 13:41:17,622 - INFO - Analyzing document: The Monster Guide to Candlestick Patterns.pdf
+2025-11-03 13:41:17,626 - INFO - Analysis complete for The Monster Guide to Candlestick Patterns.pdf
+2025-11-03 13:41:17,626 - INFO - Analyzing document: The Way of The Superior Trader FOREXIA.pdf
+2025-11-03 13:41:17,631 - INFO - Analysis complete for The Way of The Superior Trader FOREXIA.pdf
+2025-11-03 13:41:17,631 - INFO - Analyzing document: The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf
+2025-11-03 13:41:17,706 - INFO - Analysis complete for The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf
+2025-11-03 13:41:17,707 - INFO - Analyzing document: Trade Chart Patterns Like The Pros.pdf
+2025-11-03 13:41:17,729 - INFO - Analysis complete for Trade Chart Patterns Like The Pros.pdf
+2025-11-03 13:41:17,729 - INFO - Analyzing document: Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf
+2025-11-03 13:41:17,737 - INFO - Analysis complete for Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf
+2025-11-03 13:41:17,737 - INFO - NLP analysis completed for 13 documents
+2025-11-03 13:41:17,738 - INFO - STEP 3: Signal Generation
+2025-11-03 13:41:17,738 - INFO - Generating trading signals
+2025-11-03 13:41:17,738 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,738 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,739 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,739 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,740 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,740 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,740 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,741 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,741 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,741 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,742 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,742 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,742 - INFO - Generated 5 trading signals from analysis
+2025-11-03 13:41:17,742 - INFO - Filtered 65 signals to 5 high-confidence signals (threshold: 0.7)
+2025-11-03 13:41:17,743 - INFO - Generated 5 high-confidence trading signals
+2025-11-03 13:41:17,743 - INFO - STEP 4: Risk Management
+2025-11-03 13:41:17,743 - INFO - Applying risk management to signals
+2025-11-03 13:41:17,743 - INFO - Risk controls applied to SM: position=0.046, risk_score=2.1
+2025-11-03 13:41:17,744 - INFO - Risk controls applied to VD: position=0.046, risk_score=2.1
+2025-11-03 13:41:17,744 - INFO - Risk controls applied to IEEE: position=0.046, risk_score=2.1
+2025-11-03 13:41:17,744 - INFO - Risk controls applied to AX: position=0.046, risk_score=2.1
+2025-11-03 13:41:17,744 - INFO - Risk controls applied to IMA: position=0.046, risk_score=2.1
+2025-11-03 13:41:17,745 - INFO - Risk management applied: 5 signals approved
+2025-11-03 13:41:17,745 - INFO - STEP 5: Trade Execution
+2025-11-03 13:41:17,745 - INFO - Executing 5 trading signals in LIVE mode (connecting to Binance Testnet)
+2025-11-03 13:41:17,746 - ERROR - Error executing crypto testnet trades: 'dict' object has no attribute 'symbol'
+2025-11-03 13:41:17,746 - ERROR - Workflow failed: 'dict' object has no attribute 'symbol'
+2025-11-03 13:41:17,747 - ERROR - Trading bot execution failed: 'dict' object has no attribute 'symbol'
+2025-11-03 14:29:58,848 - INFO - Trading Bot Orchestrator initialized
+2025-11-03 14:29:58,849 - INFO - ==================================================
+2025-11-03 14:29:58,850 - INFO - Starting AI Trading Bot Full Workflow
+2025-11-03 14:29:58,850 - INFO - ==================================================
+2025-11-03 14:29:58,851 - INFO - STEP 1: Document Extraction
+2025-11-03 14:29:58,851 - INFO - Extracting text from PDFs in data/pdfs/
+2025-11-03 14:30:00,518 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-11-03 14:33:59,291 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:33:59,296 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:33:59,703 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:33:59,708 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:33:59,724 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:33:59,730 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:01,771 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:02,541 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:02,547 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:09,743 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:09,749 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:13,514 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:13,520 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:20,945 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:20,950 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:36,177 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:34:36,182 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:37:26,767 - INFO - Successfully extracted text from 13 documents
+2025-11-03 14:37:26,771 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-11-03 14:37:26,772 - INFO - Document: Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf, Length: 657883 characters
+2025-11-03 14:37:26,772 - INFO - Document: Forex  The Ultimate Guide To Price Action Trading.pdf, Length: 98517 characters
+2025-11-03 14:37:26,773 - INFO - Document: Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf, Length: 460911 characters
+2025-11-03 14:37:26,775 - INFO - Document: Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf, Length: 77396 characters
+2025-11-03 14:37:26,776 - INFO - Document: Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf, Length: 203575 characters
+2025-11-03 14:37:26,777 - INFO - Document: Stop Hunt Mastery FOREXIA.pdf, Length: 7131 characters
+2025-11-03 14:37:26,778 - INFO - Document: The Complete Guide To Forex Trading.pdf, Length: 149780 characters
+2025-11-03 14:37:26,779 - INFO - Document: The Monster Guide to Candlestick Patterns.pdf, Length: 31324 characters
+2025-11-03 14:37:26,780 - INFO - Document: The Way of The Superior Trader FOREXIA.pdf, Length: 32132 characters
+2025-11-03 14:37:26,780 - INFO - Document: The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf, Length: 712195 characters
+2025-11-03 14:37:26,781 - INFO - Document: Trade Chart Patterns Like The Pros.pdf, Length: 238373 characters
+2025-11-03 14:37:26,782 - INFO - Document: Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf, Length: 72082 characters
+2025-11-03 14:37:26,783 - INFO - STEP 2: NLP Analysis
+2025-11-03 14:37:26,784 - INFO - Starting NLP analysis of documents
+2025-11-03 14:37:26,785 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-11-03 14:37:26,821 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-11-03 14:37:26,822 - INFO - Analyzing document: Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf
+2025-11-03 14:37:27,026 - INFO - Analysis complete for Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf
+2025-11-03 14:37:27,027 - INFO - Analyzing document: Forex  The Ultimate Guide To Price Action Trading.pdf
+2025-11-03 14:37:27,062 - INFO - Analysis complete for Forex  The Ultimate Guide To Price Action Trading.pdf
+2025-11-03 14:37:27,063 - INFO - Analyzing document: Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf
+2025-11-03 14:37:27,205 - INFO - Analysis complete for Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf
+2025-11-03 14:37:27,206 - INFO - Analyzing document: Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf
+2025-11-03 14:37:27,231 - INFO - Analysis complete for Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf
+2025-11-03 14:37:27,232 - INFO - Analyzing document: Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf
+2025-11-03 14:37:27,296 - INFO - Analysis complete for Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf
+2025-11-03 14:37:27,297 - INFO - Analyzing document: Stop Hunt Mastery FOREXIA.pdf
+2025-11-03 14:37:27,301 - INFO - Analysis complete for Stop Hunt Mastery FOREXIA.pdf
+2025-11-03 14:37:27,301 - INFO - Analyzing document: The Complete Guide To Forex Trading.pdf
+2025-11-03 14:37:27,348 - INFO - Analysis complete for The Complete Guide To Forex Trading.pdf
+2025-11-03 14:37:27,349 - INFO - Analyzing document: The Monster Guide to Candlestick Patterns.pdf
+2025-11-03 14:37:27,360 - INFO - Analysis complete for The Monster Guide to Candlestick Patterns.pdf
+2025-11-03 14:37:27,361 - INFO - Analyzing document: The Way of The Superior Trader FOREXIA.pdf
+2025-11-03 14:37:27,373 - INFO - Analysis complete for The Way of The Superior Trader FOREXIA.pdf
+2025-11-03 14:37:27,374 - INFO - Analyzing document: The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf
+2025-11-03 14:37:27,601 - INFO - Analysis complete for The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf
+2025-11-03 14:37:27,602 - INFO - Analyzing document: Trade Chart Patterns Like The Pros.pdf
+2025-11-03 14:37:27,685 - INFO - Analysis complete for Trade Chart Patterns Like The Pros.pdf
+2025-11-03 14:37:27,685 - INFO - Analyzing document: Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf
+2025-11-03 14:37:27,711 - INFO - Analysis complete for Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf
+2025-11-03 14:37:27,711 - INFO - NLP analysis completed for 13 documents
+2025-11-03 14:37:27,712 - INFO - STEP 3: Signal Generation
+2025-11-03 14:37:27,713 - INFO - Generating trading signals
+2025-11-03 14:37:27,713 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,714 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,715 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,716 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,717 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,717 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,717 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,718 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,719 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,720 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,720 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,720 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,721 - INFO - Generated 5 trading signals from analysis
+2025-11-03 14:37:27,721 - INFO - Filtered 65 signals to 5 high-confidence signals (threshold: 0.7)
+2025-11-03 14:37:27,722 - INFO - Generated 5 high-confidence trading signals
+2025-11-03 14:37:27,723 - INFO - STEP 4: Risk Management
+2025-11-03 14:37:27,723 - INFO - Applying risk management to signals
+2025-11-03 14:37:27,724 - INFO - Risk controls applied to AX: position=0.046, risk_score=2.1
+2025-11-03 14:37:27,725 - INFO - Risk controls applied to IEEE: position=0.046, risk_score=2.1
+2025-11-03 14:37:27,726 - INFO - Risk controls applied to EG: position=0.046, risk_score=2.1
+2025-11-03 14:37:27,726 - INFO - Risk controls applied to TS: position=0.046, risk_score=2.1
+2025-11-03 14:37:27,727 - INFO - Risk controls applied to IHP: position=0.046, risk_score=2.1
+2025-11-03 14:37:27,728 - INFO - Risk management applied: 5 signals approved
+2025-11-03 14:37:27,728 - INFO - STEP 5: Trade Execution
+2025-11-03 14:37:27,729 - INFO - Executing 5 trading signals in LIVE mode (connecting to Binance Testnet)
+2025-11-03 14:37:27,730 - ERROR - Error executing crypto testnet trades: 'dict' object has no attribute 'symbol'
+2025-11-03 14:37:27,731 - ERROR - Workflow failed: 'dict' object has no attribute 'symbol'
+2025-11-03 14:37:27,731 - ERROR - Trading bot execution failed: 'dict' object has no attribute 'symbol'
+2025-11-03 14:56:21,025 - INFO - Trading Bot Orchestrator initialized
+2025-11-03 14:56:21,026 - INFO - ==================================================
+2025-11-03 14:56:21,027 - INFO - Starting AI Trading Bot Full Workflow
+2025-11-03 14:56:21,028 - INFO - ==================================================
+2025-11-03 14:56:21,029 - INFO - STEP 1: Document Extraction
+2025-11-03 14:56:21,029 - INFO - Extracting text from PDFs in data/pdfs/
+2025-11-03 14:56:21,456 - WARNING - Cannot set gray non-stroke color because /'R157' is an invalid float value
+2025-11-03 14:59:31,565 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:31,574 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:32,069 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:32,074 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:32,093 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:32,101 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:34,517 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:35,363 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:35,369 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:42,631 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:42,636 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:46,415 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:46,418 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:50,802 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:50,803 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:55,842 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 14:59:55,852 - WARNING - Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-11-03 15:01:11,857 - INFO - Successfully extracted text from 13 documents
+2025-11-03 15:01:11,858 - INFO - Document: 2107.09660v1.pdf, Length: 77396 characters
+2025-11-03 15:01:11,858 - INFO - Document: Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf, Length: 657883 characters
+2025-11-03 15:01:11,859 - INFO - Document: Forex  The Ultimate Guide To Price Action Trading.pdf, Length: 98517 characters
+2025-11-03 15:01:11,859 - INFO - Document: Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf, Length: 460911 characters
+2025-11-03 15:01:11,859 - INFO - Document: Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf, Length: 77396 characters
+2025-11-03 15:01:11,859 - INFO - Document: Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf, Length: 203575 characters
+2025-11-03 15:01:11,860 - INFO - Document: Stop Hunt Mastery FOREXIA.pdf, Length: 7131 characters
+2025-11-03 15:01:11,860 - INFO - Document: The Complete Guide To Forex Trading.pdf, Length: 149780 characters
+2025-11-03 15:01:11,860 - INFO - Document: The Monster Guide to Candlestick Patterns.pdf, Length: 31324 characters
+2025-11-03 15:01:11,860 - INFO - Document: The Way of The Superior Trader FOREXIA.pdf, Length: 32132 characters
+2025-11-03 15:01:11,861 - INFO - Document: The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf, Length: 712195 characters
+2025-11-03 15:01:11,861 - INFO - Document: Trade Chart Patterns Like The Pros.pdf, Length: 238373 characters
+2025-11-03 15:01:11,861 - INFO - Document: Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf, Length: 72082 characters
+2025-11-03 15:01:11,862 - INFO - STEP 2: NLP Analysis
+2025-11-03 15:01:11,862 - INFO - Starting NLP analysis of documents
+2025-11-03 15:01:11,862 - INFO - Analyzing document: 2107.09660v1.pdf
+2025-11-03 15:01:11,878 - INFO - Analysis complete for 2107.09660v1.pdf
+2025-11-03 15:01:11,878 - INFO - Analyzing document: Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf
+2025-11-03 15:01:11,946 - INFO - Analysis complete for Chart_Your_Way_To_Profits_The_Online_Traders_Guide_to_Technical.pdf
+2025-11-03 15:01:11,946 - INFO - Analyzing document: Forex  The Ultimate Guide To Price Action Trading.pdf
+2025-11-03 15:01:11,960 - INFO - Analysis complete for Forex  The Ultimate Guide To Price Action Trading.pdf
+2025-11-03 15:01:11,960 - INFO - Analyzing document: Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf
+2025-11-03 15:01:12,022 - INFO - Analysis complete for Mastering_Trading_Stress_Strategies_for_Maximizing_Performance.pdf
+2025-11-03 15:01:12,023 - INFO - Analyzing document: Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf
+2025-11-03 15:01:12,032 - INFO - Analysis complete for Moving_Averages_101_Incredible_Signals_That_Will_Make_You_Money.pdf
+2025-11-03 15:01:12,033 - INFO - Analyzing document: Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf
+2025-11-03 15:01:12,063 - INFO - Analysis complete for Profitable_Day_and_Swing_Trading_Using_Price_Volume_Surges_and_Pattern.pdf
+2025-11-03 15:01:12,063 - INFO - Analyzing document: Stop Hunt Mastery FOREXIA.pdf
+2025-11-03 15:01:12,065 - INFO - Analysis complete for Stop Hunt Mastery FOREXIA.pdf
+2025-11-03 15:01:12,065 - INFO - Analyzing document: The Complete Guide To Forex Trading.pdf
+2025-11-03 15:01:12,089 - INFO - Analysis complete for The Complete Guide To Forex Trading.pdf
+2025-11-03 15:01:12,090 - INFO - Analyzing document: The Monster Guide to Candlestick Patterns.pdf
+2025-11-03 15:01:12,095 - INFO - Analysis complete for The Monster Guide to Candlestick Patterns.pdf
+2025-11-03 15:01:12,095 - INFO - Analyzing document: The Way of The Superior Trader FOREXIA.pdf
+2025-11-03 15:01:12,101 - INFO - Analysis complete for The Way of The Superior Trader FOREXIA.pdf
+2025-11-03 15:01:12,101 - INFO - Analyzing document: The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf
+2025-11-03 15:01:12,187 - INFO - Analysis complete for The_New_Trading_for_a_Living_Psychology,_Discipline,_Trading_Tools.pdf
+2025-11-03 15:01:12,187 - INFO - Analyzing document: Trade Chart Patterns Like The Pros.pdf
+2025-11-03 15:01:12,224 - INFO - Analysis complete for Trade Chart Patterns Like The Pros.pdf
+2025-11-03 15:01:12,225 - INFO - Analyzing document: Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf
+2025-11-03 15:01:12,234 - INFO - Analysis complete for Trading_Habits_39_of_the_World's_Most_Powerful_Stock_Market_Rules.pdf
+2025-11-03 15:01:12,235 - INFO - NLP analysis completed for 13 documents
+2025-11-03 15:01:12,235 - INFO - STEP 3: Signal Generation
+2025-11-03 15:01:12,236 - INFO - Generating trading signals
+2025-11-03 15:01:12,237 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,238 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,238 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,239 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,239 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,239 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,240 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,240 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,240 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,241 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,241 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,241 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,242 - INFO - Generated 5 trading signals from analysis
+2025-11-03 15:01:12,242 - INFO - Filtered 65 signals to 5 high-confidence signals (threshold: 0.7)
+2025-11-03 15:01:12,243 - INFO - Generated 5 high-confidence trading signals
+2025-11-03 15:01:12,243 - INFO - STEP 4: Risk Management
+2025-11-03 15:01:12,243 - INFO - Applying risk management to signals
+2025-11-03 15:01:12,244 - INFO - Risk controls applied to EE: position=0.046, risk_score=2.1
+2025-11-03 15:01:12,244 - INFO - Risk controls applied to SIAM: position=0.046, risk_score=2.1
+2025-11-03 15:01:12,244 - INFO - Risk controls applied to SM: position=0.046, risk_score=2.1
+2025-11-03 15:01:12,245 - INFO - Risk controls applied to IEEE: position=0.046, risk_score=2.1
+2025-11-03 15:01:12,245 - INFO - Risk controls applied to EG: position=0.046, risk_score=2.1
+2025-11-03 15:01:12,246 - INFO - Risk management applied: 5 signals approved
+2025-11-03 15:01:12,246 - INFO - STEP 5: Trade Execution
+2025-11-03 15:01:12,246 - INFO - Executing 5 trading signals in LIVE mode (connecting to Binance Testnet)
+2025-11-03 15:01:21,425 - INFO - Crypto testnet trading execution completed
+2025-11-03 15:01:21,430 - INFO - ==================================================
+2025-11-03 15:01:21,431 - INFO - AI Trading Bot Workflow Completed Successfully
+2025-11-03 15:01:21,431 - INFO - Documents processed: 13
+2025-11-03 15:01:21,431 - INFO - Signals generated: 5
+2025-11-03 15:01:21,432 - INFO - Trades executed: 5
+2025-11-03 15:01:21,432 - INFO - ==================================================
